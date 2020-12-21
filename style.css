@@ -1,9 +1,18 @@
 @keyframes portfolio-anim{
 
     to{
-       opacity: 100%;
+        opacity: 100%;
         -webkit-box-shadow:  0px 0px 20px 1px rgba(255,255,255, .2);
         box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.2);
+    }
+}
+
+@keyframes arrow{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(6vh);
     }
 }
 
@@ -43,6 +52,15 @@
 
     height: 100%;
     background: url(img/header-img.jpg) no-repeat center center / cover;
+}
+#arrow{
+    position: absolute;
+    
+    bottom: 0;
+    background-size:cover;
+    animation-name: arrow;
+    animation-iteration-count: infinite;
+    animation-duration: 1s
 }
 
 .nav{
@@ -124,10 +142,10 @@
 
 @media (max-width: 700px){
     .header-name{
-    font-size: 6vw;
+        font-size: 6vw;
     }
     .header-text, .boxtext{
-    font-size: 3.7vw;
+        font-size: 3.7vw;
 
     }
 }
@@ -152,6 +170,13 @@
 }
 
 .section-header{
+    padding: 15vh 0;
+    width: 100%;
+
+    text-align: center;
+}
+
+.section-header2{
     padding: 10vh 0;
     width: 100%;
 
@@ -194,7 +219,16 @@
 }
 .left-side ul li{
     list-style: none;
+    padding: 1vh 0;
     color: #999;
+}
+.left-side ul li a{
+    color: #999;
+    text-decoration: none;
+}
+.left-side ul li a:hover{
+    color: black;
+    text-decoration:underline;
 }
 
 .info{
@@ -212,7 +246,7 @@
     display: block;
     text-align: center;
     color: black; 
-     margin: 0 auto;
+    margin: 0 auto;
 }
 
 .center-side .quote-text{
@@ -228,26 +262,26 @@
 
 
 @media (max-width: 1000px){
-    
+
     .left-side{
         width: 100vw;
-        
+
         text-align: center;
     }
-    
+
     .center-side .quoteline{
         font-size:  4.4vw
     }
-    
+
     .center-side .quote-text{
         padding: 25px 0;
-       
+
         font-size: 3vw;
     }
     .center-side{
-       width: 100vw;
+        width: 100vw;
         padding: 25px 0;
-       
+
         font-size: 3vw;
     }
 
@@ -309,7 +343,7 @@
     color: white;
 }
 .text-holder{
-    padding: 6vh 0;
+    padding: 10vh 0 9vh 0;
 }
 
 .grid{
@@ -327,16 +361,16 @@
     position: relative;
     width: 450px;
     height: 278px;
-    
+
 }
 
 .cell:hover{
-    
-     transform: scale(1.03);
+
+    transform: scale(1.03);
     animation-name: portfolio-anim;
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
-   
+
 }
 
 
@@ -359,7 +393,7 @@
 
 .cell:hover .pic-title{
     padding: 1vh;
-     border-bottom: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid rgba(255,255,255,.1);
 }
 
 .contact{  
@@ -388,7 +422,7 @@
 }
 
 .form textarea{
-   height: 15vh;
+    height: 15vh;
 }
 
 .form input:hover, textarea:hover{
@@ -396,9 +430,9 @@
 }
 
 .form input:focus, textarea:focus{
-     background-color: #efefef;
-        -webkit-box-shadow:  0px 0px 4px 1px rgba(0, 235, 255, .35);
-        box-shadow: 0px 0px 4px 1px rgba(0, 235, 255, .35);
+    background-color: #efefef;
+    -webkit-box-shadow:  0px 0px 4px 1px rgba(0, 235, 255, .35);
+    box-shadow: 0px 0px 4px 1px rgba(0, 235, 255, .35);
 }
 .form input[type="submit"]{
     border: 2px solid rgba(0, 0, 0, 0.7);;
@@ -418,7 +452,7 @@ footer{
     background-color: var(--section-color);
     width: 100vw;
     height: 20vh;
-        display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
